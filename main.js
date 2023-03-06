@@ -4,10 +4,10 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() == computerSelection) {
+    if (playerSelection == computerSelection) {
         return "It's a Tie!";
     }
-    else if (playerSelection.toLowerCase() == 'rock') {
+    else if (playerSelection == 'rock') {
         switch (computerSelection) {
             case 'paper':
                 return "You Lose! Paper beats Rock";
@@ -18,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
                 break;
         }
     }
-    else if (playerSelection.toLowerCase() == 'paper') {
+    else if (playerSelection == 'paper') {
         switch (computerSelection) {
             case 'scissors':
                 return "You Lose! Scissors beats Paper";
@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
                 break;
         }
     }
-    else if (playerSelection.toLowerCase() == 'scissors') {
+    else if (playerSelection == 'scissors') {
         switch (computerSelection) {
             case 'rock':
                 return "You Lose! Rock beats Scissors";
@@ -44,12 +44,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
+    score = 0 // Reset score each time
     for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Enter your choice: ").toLowerCase();
+        const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        console.log('Current score:', score)
+
     }
-    console.log(score)
+    console.log(`Your Final Score is: ${score}`)
 }
 
 let score = 0;
