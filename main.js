@@ -1,7 +1,15 @@
 function getComputerChoice() {
-    return options[Math.floor(Math.random()*3)]
+    return options[Math.floor(Math.random()*3)];
 }
 
-const options = ['Rock', 'Paper', 'Scissors']
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection.toLowerCase() == computerSelection) {
+        console.log("It's a Tie!")
+    }
 
-getComputerChoice()
+}
+
+const options = ['rock', 'paper', 'scissors']
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
