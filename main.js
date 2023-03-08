@@ -6,10 +6,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'rock') {
         switch (computerSelection) {
             case 'paper':
+                computerScore ++;
                 return "You Lose! Paper beats Rock";
                 break;
             case 'scissors':
-                score ++;
+                playerScore ++;
                 return "You Win! Rock beats Scissors";
                 break;
         }
@@ -17,10 +18,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'paper') {
         switch (computerSelection) {
             case 'scissors':
+                computerScore ++;
                 return "You Lose! Scissors beats Paper";
                 break;
             case 'rock':
-                score ++;
+                playerScore ++;
                 return "You Win! Paper beats Rock";
                 break;
         }
@@ -28,10 +30,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'scissors') {
         switch (computerSelection) {
             case 'rock':
+                computerScore ++;
                 return "You Lose! Rock beats Scissors";
                 break;
             case 'paper':
-                score ++;
+                playerScore ++;
                 return "You Win! Scissors beats Paper";
                 break;
         }
@@ -51,15 +54,18 @@ function getPlayerChoice(e) {
 };
 
 
-let score = 0;
+// Score Variables
+let playerScore = 0;
+let computerScore = 0;
 
+// Event Listeners
 let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', getPlayerChoice);
     (button.className, getComputerChoice);
 });
 
-
+// Display Running Score
 
 
 
