@@ -1,4 +1,10 @@
 // Functions
+function gameOver() {
+    buttons[0].disabled = 'true';
+    buttons[1].disabled = 'true';
+    buttons[2].disabled = 'true';
+};
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "It's a Tie!";
@@ -50,7 +56,7 @@ function getComputerChoice() {
 function getPlayerChoice(e) {
     let playerSelection = e.target.className;
     let computerSelection = getComputerChoice();
-    roundResultTxt.textContent = playRound(playerSelection,computerSelection)
+    roundResultTxt.textContent = playRound(playerSelection,computerSelection);
 };
 
 
@@ -67,10 +73,16 @@ function changeScore(user) {
     if (user === 'player') {
         playerScore ++;
         playerScoreEle.textContent = `${playerScore}`;
+        if (playerScore == 5) {
+            gameOver();
+        };
         
     } else if (user === 'computer') {
         computerScore ++;
         computerScoreEle.textContent = `${computerScore}`;
+        if (computerScore == 5) {
+            gameOver();
+        };
     };
 };
 
@@ -78,7 +90,6 @@ function changeScore(user) {
 let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', getPlayerChoice);
-    (button.className, getComputerChoice);
 });
 
 
