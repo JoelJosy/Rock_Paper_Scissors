@@ -1,9 +1,4 @@
 // Functions
-function getComputerChoice() {
-    const options = ['rock', 'paper', 'scissors'];
-    return options[Math.floor(Math.random()*3)];
-}
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "It's a Tie!";
@@ -44,9 +39,15 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+function getComputerChoice() {
+    const options = ['rock', 'paper', 'scissors'];
+    return options[Math.floor(Math.random()*3)];
+}
+
 function getPlayerChoice(e) {
-    const playerSelection = e.target.className;
-    console.log(playerSelection)
+    let playerSelection = e.target.className;
+    let computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection,computerSelection))
 };
 
 
