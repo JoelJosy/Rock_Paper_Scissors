@@ -48,8 +48,17 @@ let score = 0;
 
 
 
+
+
+
+
+
+
+
+
+
 // function game() {
-//     score = 0 // Reset score each time
+//     score = 0 // Res et score each time
 //     for (let i = 0; i < 5; i++) {
 //         const playerSelection = prompt("Enter your choice: ").toLowerCase();
 //         const computerSelection = getComputerChoice();
