@@ -1,3 +1,4 @@
+// Functions
 function getComputerChoice() {
     const options = ['rock', 'paper', 'scissors'];
     return options[Math.floor(Math.random()*3)];
@@ -43,9 +44,19 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+function getPlayerChoice(e) {
+    const playerSelection = e.target.className;
+    console.log(playerSelection)
+};
+
 
 let score = 0;
 
+let buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', getPlayerChoice);
+    (button.className, getComputerChoice);
+});
 
 
 
