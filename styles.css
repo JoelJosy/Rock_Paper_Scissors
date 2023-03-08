@@ -13,7 +13,7 @@ button {
     width: 100px;
 }
 
-.scoreboard, .result {
+.scoreboard, .round-result {
     border: 2px solid lime;
     min-height: 100px;
     margin: 30px;

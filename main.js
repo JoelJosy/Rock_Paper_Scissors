@@ -50,13 +50,15 @@ function getComputerChoice() {
 function getPlayerChoice(e) {
     let playerSelection = e.target.className;
     let computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection,computerSelection))
+    roundResultTxt.textContent = playRound(playerSelection,computerSelection)
 };
 
 
 // Display Running Score
 let playerScoreEle = document.getElementById('player-score');
 let computerScoreEle = document.getElementById('computer-score');
+let roundResultTxt = document.getElementById('round-result-txt');
+
 
 // Score Variables
 let playerScore = 0;
