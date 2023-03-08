@@ -6,11 +6,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'rock') {
         switch (computerSelection) {
             case 'paper':
-                computerScore ++;
+                changeScore('computer');
                 return "You Lose! Paper beats Rock";
                 break;
             case 'scissors':
-                playerScore ++;
+                changeScore('player');
                 return "You Win! Rock beats Scissors";
                 break;
         }
@@ -18,11 +18,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'paper') {
         switch (computerSelection) {
             case 'scissors':
-                computerScore ++;
+                changeScore('computer');
                 return "You Lose! Scissors beats Paper";
                 break;
             case 'rock':
-                playerScore ++;
+                changeScore('player');
                 return "You Win! Paper beats Rock";
                 break;
         }
@@ -30,11 +30,11 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'scissors') {
         switch (computerSelection) {
             case 'rock':
-                computerScore ++;
+                changeScore('computer');
                 return "You Lose! Rock beats Scissors";
                 break;
             case 'paper':
-                playerScore ++;
+                changeScore('player');
                 return "You Win! Scissors beats Paper";
                 break;
         }
@@ -54,9 +54,23 @@ function getPlayerChoice(e) {
 };
 
 
+// Display Running Score
+let playerScoreEle = document.getElementById('player-score');
+let computerScoreEle = document.getElementById('computer-score');
+
 // Score Variables
 let playerScore = 0;
 let computerScore = 0;
+function changeScore(user) {
+    if (user === 'player') {
+        playerScore ++;
+        playerScoreEle.textContent = `${playerScore}`;
+        
+    } else if (user === 'computer') {
+        computerScore ++;
+        computerScoreEle.textContent = `${computerScore}`;
+    };
+};
 
 // Event Listeners
 let buttons = document.querySelectorAll('button');
@@ -65,7 +79,7 @@ buttons.forEach((button) => {
     (button.className, getComputerChoice);
 });
 
-// Display Running Score
+
 
 
 
