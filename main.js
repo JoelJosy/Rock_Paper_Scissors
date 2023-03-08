@@ -43,18 +43,19 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game() {
-    score = 0 // Reset score each time
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Enter your choice: ").toLowerCase();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('Current score:', score)
-
-    }
-    console.log(`Your Final Score is: ${score}`)
-}
 
 let score = 0;
 
-game()
+
+
+// function game() {
+//     score = 0 // Reset score each time
+//     for (let i = 0; i < 5; i++) {
+//         const playerSelection = prompt("Enter your choice: ").toLowerCase();
+//         const computerSelection = getComputerChoice();
+//         console.log(playRound(playerSelection, computerSelection));
+//         console.log('Current score:', score)
+
+//     }
+//     console.log(`Your Final Score is: ${score}`)
+// }
