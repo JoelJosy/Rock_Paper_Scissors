@@ -9,24 +9,49 @@
         <link rel="icon" href="https://fav.farm/🕹️" />
     </head>
     <body>
-        <h1>Rock Paper Scissors</h1>
+        <div class="header">
+            <h1>Rock Paper Scissors</h1>
+        </div>
         <div class="scoreboard">
-            <div class="player-score-div">
+            <div class="player-section">
                 <h3>Player:</h3>
                 <h2 id="player-score">0</h2>
+                <div class="player-selection"></div>
             </div>
-            <div class="computer-score-div">
+            <div class="computer-section">
                 <h3>Computer:</h3>
                 <h2 id="computer-score">0</h2>
+                <div class="computer-selection"></div>
             </div>
         </div>
-        <button class="rock" type="button">ROCK</button>
-        <button class="paper" type="button">PAPER</button>
-        <button class="scissors" type="button">SCISSORS</button>
-        <div class="round-result">
-            <h3 id="round-result-txt"></h3>
+        <div class="buttons">
+            <button class="rock" type="button">
+                <img
+                    src="./imgs/rock.png"
+                    alt="Rock"
+                    width="128px"
+                    height="128px"
+                />
+            </button>
+            <button class="paper" type="button">
+                <img
+                    src="./imgs/paper.png"
+                    alt="Paper"
+                    width="128px"
+                    height="128px"
+                />
+            </button>
+            <button class="scissors" type="button">
+                <img
+                    src="./imgs/scissors.png"
+                    alt="Scissors"
+                    width="128px"
+                    height="128px"
+                />
+            </button>
         </div>
+        <div class="footer"></div>
 
-        <script src="main.js"></script>
+        <!-- <script src="main.js"></script> -->
     </body>
 </html>
