@@ -1,4 +1,4 @@
-.player-box, .computer-box, .scoreboard, .buttons, .gif {
+.player-box, .computer-box, .scoreboard, .buttons, .livescore {
     border: 2px solid lime;
 }
 
@@ -18,6 +18,8 @@ body {
 button {
     border: none;
     background: #F1FAEE;
+    height: 7rem;
+    width: 7rem;
     /* transition: 0.07s; */
     transform: scale(1);
 }
@@ -47,6 +49,7 @@ button:active {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    padding-top: 2rem;
 }
 
 .livescore {
@@ -56,13 +59,10 @@ button:active {
     gap: 2rem;
 }
 
-.gif {
-    margin: 0;
-}
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 3rem;
+    padding: 1.5rem;
 }
