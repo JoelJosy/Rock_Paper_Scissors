@@ -1,4 +1,4 @@
-.player-box, .computer-box, .scoreboard, .buttons, .livescore {
+.player-box, .computer-box, .scoreboard, .livescore {
     border: 2px solid lime;
 }
 
@@ -13,15 +13,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-button {
-    border: none;
-    background: #F1FAEE;
-    height: 7rem;
-    width: 7rem;
-    /* transition: 0.07s; */
-    transform: scale(1);
 }
 
 button:active {
@@ -64,5 +55,18 @@ button:active {
     display: flex;
     justify-content: center;
     gap: 3rem;
+    padding: 1.6rem 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #223E60;
+    border-radius: 0.7rem;
+}
+
+button {
+    border: none;
+    border-radius: 0.7rem;
+    background-color: #31587A;
     padding: 1.5rem;
+    /* transition: 0.07s; */
+    transform: scale(1);
 }
