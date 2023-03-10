@@ -112,7 +112,7 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice(e) {
-    let playerSelection = e.target.className;
+    let playerSelection = e.target.id;
     let computerSelection = getComputerChoice();
     
     playerSelectionImg.src = `./imgs/${playerSelection}.png`;
@@ -140,15 +140,18 @@ let computerSelectionArea = document.querySelector('.computer-selection-area')
 
 let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-text');
+let modalBtn = document.querySelector('.modal-btn');
 
 // Score Variables
 let playerScore = 0;
 let computerScore = 0;
 
 // Event Listeners
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('.game-btn');
 buttons.forEach((button) => {
     button.addEventListener('click', getPlayerChoice);
 });
+
+
 
 

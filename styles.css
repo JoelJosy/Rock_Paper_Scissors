@@ -121,26 +121,26 @@ button:disabled {
 }
 
 /* Button Image Fix */
-.rock, .paper, .scissors {
+#rock, #paper, #scissors {
     width: 118px;
     height: 118px;
 }
 
-.rock {
+#rock {
     background-image: url('./imgs/rock.png');
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.paper {
+#paper {
     background-image: url('./imgs/paper.png');
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: center
 }
 
-.scissors {
+#scissors {
     background-image: url('./imgs/scissors.png');
     background-size: 64px;
     background-repeat: no-repeat;
