@@ -73,16 +73,22 @@ function getComputerChoice() {
 
 function getPlayerChoice(e) {
     let playerSelection = e.target.className;
-    console.log(playerSelection);
     let computerSelection = getComputerChoice();
-    // roundResultTxt.textContent = 
-    console.log(playRound(playerSelection,computerSelection));
+    
+    playerSelectionImg.src = `./imgs/${playerSelection}.png`;
+    playerSelectionImg.width = 180;
+    computerSelectionImg.src = `./imgs/${computerSelection}.png`;
+    computerSelectionImg.width = 180;
+
+    playRound(playerSelection,computerSelection);
 };
 
 
 // Display Running Score
 let playerScoreEle = document.getElementById('player-score');
 let computerScoreEle = document.getElementById('computer-score');
+let playerSelectionImg = document.getElementById('player-selection');
+let computerSelectionImg = document.getElementById('computer-selection');
 
 
 // Score Variables

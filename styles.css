@@ -27,6 +27,7 @@ body {
     background-color: #15263F;
 }
 
+/* Scoreboard */
 .scoreboard {
     display: flex;
     justify-content: center;
@@ -51,6 +52,7 @@ body {
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
+/* Buttons Container + General Buttons */
 
 .buttons {
     display: flex;
@@ -78,7 +80,7 @@ button:disabled {
     opacity: 0.5;
 }
 
-/* Button Design */
+/* Button Image Fix */
 .rock, .paper, .scissors {
     width: 118px;
     height: 118px;
@@ -103,4 +105,16 @@ button:disabled {
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: center
+}
+
+/* Player Selection Images */
+.player-selection-area, .computer-selection-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 286px;
+}
+
+.player-selection-area > img, .computer-selection-area > img {
+    max-height: 250px;
 }
