@@ -3,6 +3,14 @@ function gameOver() {
     buttons[0].disabled = 'false';
     buttons[1].disabled = 'false';
     buttons[2].disabled = 'false';
+
+    if (playerScore > computerScore) {
+        modalText.textContent = "Congratulations! You Won The Game!";
+    } else {
+        modalText.textContent = "You Lost The Game! Better Luck Next Time.";
+    };
+
+    modal.classList.add('open');
 };
 
 function winColor() {
@@ -130,6 +138,9 @@ let tieAudio = document.querySelector('.tie-audio');
 let playerSelectionArea = document.querySelector('.player-selection-area')
 let computerSelectionArea = document.querySelector('.computer-selection-area')
 
+let modal = document.querySelector('.modal');
+let modalText = document.querySelector('.modal-text');
+
 // Score Variables
 let playerScore = 0;
 let computerScore = 0;
@@ -141,23 +152,3 @@ buttons.forEach((button) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-// function game() {
-//     score = 0 // Res et score each time
-//     for (let i = 0; i < 5; i++) {
-//         const playerSelection = prompt("Enter your choice: ").toLowerCase();
-//         const computerSelection = getComputerChoice();
-//         console.log(playRound(playerSelection, computerSelection));
-//         console.log('Current score:', score)
-
-//     }
-//     console.log(`Your Final Score is: ${score}`)
-// }

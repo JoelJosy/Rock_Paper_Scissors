@@ -110,6 +110,7 @@ button {
     background-color: #31587A;
     padding: 1.5rem;
     transform: scale(1);
+    cursor: pointer;
 }
 
 button:enabled:active {
@@ -144,4 +145,25 @@ button:disabled {
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: center
+}
+
+/* Modal */
+.modal {
+    background: #fff;
+    border-radius: 0.7rem;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s;
+}
+
+.modal.open {
+    transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
 }
