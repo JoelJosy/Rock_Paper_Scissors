@@ -78,3 +78,29 @@ button:disabled {
     opacity: 0.5;
 }
 
+/* Button Design */
+.rock, .paper, .scissors {
+    width: 118px;
+    height: 118px;
+}
+
+.rock {
+    background-image: url('./imgs/rock.png');
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.paper {
+    background-image: url('./imgs/paper.png');
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.scissors {
+    background-image: url('./imgs/scissors.png');
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center
+}
