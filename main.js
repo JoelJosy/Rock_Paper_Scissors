@@ -152,6 +152,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', getPlayerChoice);
 });
 
+modalBtn.addEventListener('click', () => {window.location.reload();});
 
 
 
