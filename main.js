@@ -1,8 +1,8 @@
 // Functions
 function gameOver() {
-    buttons[0].disabled = 'true';
-    buttons[1].disabled = 'true';
-    buttons[2].disabled = 'true';
+    buttons[0].disabled = 'false';
+    buttons[1].disabled = 'false';
+    buttons[2].disabled = 'false';
 };
 
 function playRound(playerSelection, computerSelection) {
@@ -48,28 +48,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function getComputerChoice() {
-    const options = ['rock', 'paper', 'scissors'];
-    return options[Math.floor(Math.random()*3)];
-}
-
-function getPlayerChoice(e) {
-    let playerSelection = e.target.className;
-    let computerSelection = getComputerChoice();
-    // roundResultTxt.textContent = 
-    playRound(playerSelection,computerSelection);
-};
-
-
-// Display Running Score
-let playerScoreEle = document.getElementById('player-score');
-let computerScoreEle = document.getElementById('computer-score');
-// let roundResultTxt = document.getElementById('round-result-txt');
-
-
-// Score Variables
-let playerScore = 0;
-let computerScore = 0;
 function changeScore(user) {
     if (user === 'player') {
         playerScore ++;
@@ -86,6 +64,30 @@ function changeScore(user) {
         };
     };
 };
+
+
+function getComputerChoice() {
+    const options = ['rock', 'paper', 'scissors'];
+    return options[Math.floor(Math.random()*3)];
+}
+
+function getPlayerChoice(e) {
+    let playerSelection = e.target.className;
+    console.log(playerSelection);
+    let computerSelection = getComputerChoice();
+    // roundResultTxt.textContent = 
+    console.log(playRound(playerSelection,computerSelection));
+};
+
+
+// Display Running Score
+let playerScoreEle = document.getElementById('player-score');
+let computerScoreEle = document.getElementById('computer-score');
+
+
+// Score Variables
+let playerScore = 0;
+let computerScore = 0;
 
 // Event Listeners
 let buttons = document.querySelectorAll('button');
