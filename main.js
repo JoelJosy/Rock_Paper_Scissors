@@ -5,10 +5,28 @@ function gameOver() {
     buttons[2].disabled = 'false';
 };
 
+function winColor() {
+    playerSelectionArea.classList.add('win-color');
+    setTimeout(() => {playerSelectionArea.classList.remove('win-color')} , 300);
+};
+
+function loseColor() {
+    playerSelectionArea.classList.add('lose-color');
+    setTimeout(() => {playerSelectionArea.classList.remove('lose-color')} , 300);
+};
+
+function tieShake() {
+    playerSelectionArea.classList.add('tie-shake');
+    computerSelectionArea.classList.add('tie-shake');
+    setTimeout(() => {playerSelectionArea.classList.remove('tie-shake')} , 300);
+    setTimeout(() => {computerSelectionArea.classList.remove('tie-shake')} , 300);
+};
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         tieAudio.currentTime = 0;
         tieAudio.play();
+        tieShake()
         return "It's a Tie!";
     }
     else if (playerSelection == 'rock') {
@@ -54,8 +72,12 @@ function changeScore(user) {
     if (user === 'player') {
         playerScore ++;
         playerScoreEle.textContent = `${playerScore}`;
+
+        winColor();
+
         winAudio.currentTime = 0; // play audio
         winAudio.play();
+
         if (playerScore == 5) {
             gameOver();
         };
@@ -63,8 +85,12 @@ function changeScore(user) {
     } else if (user === 'computer') {
         computerScore ++;
         computerScoreEle.textContent = `${computerScore}`;
+
+        loseColor();
+
         loseAudio.currentTime = 0; // play audio
         loseAudio.play();
+
         if (computerScore == 5) {
             gameOver();
         };
@@ -100,6 +126,9 @@ let computerSelectionImg = document.getElementById('computer-selection');
 let loseAudio = document.querySelector('.lose-audio');
 let winAudio = document.querySelector('.win-audio');
 let tieAudio = document.querySelector('.tie-audio');
+
+let playerSelectionArea = document.querySelector('.player-selection-area')
+let computerSelectionArea = document.querySelector('.computer-selection-area')
 
 // Score Variables
 let playerScore = 0;

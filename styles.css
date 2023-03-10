@@ -52,6 +52,45 @@ body {
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
+/* Player Selection Images */
+.player-selection-area, .computer-selection-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 272px;
+    border-radius: 0.7rem;
+    transition: all 1s;
+}
+
+.player-selection-area > img, .computer-selection-area > img {
+    max-height: 250px;
+}
+
+/* Win/Lose/Tie Effects */
+.win-color {
+    background-color: #609966;
+    border: #609966;
+    box-shadow:  0 0 50px #609966; 
+}
+
+.lose-color {
+    background-color: #DF2E38;
+    border: #DF2E38;
+    box-shadow:  0 0 50px #DF2E38;
+}
+
+.tie-shake {
+    animation: tie-shake 0.1s infinite;
+}
+
+@keyframes tie-shake {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(0px) }
+    75% { transform: translateX(-5px) }
+    100% { transform: translateX(0) }
+}
+
 /* Buttons Container + General Buttons */
 
 .buttons {
@@ -105,16 +144,4 @@ button:disabled {
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: center
-}
-
-/* Player Selection Images */
-.player-selection-area, .computer-selection-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 286px;
-}
-
-.player-selection-area > img, .computer-selection-area > img {
-    max-height: 250px;
 }
