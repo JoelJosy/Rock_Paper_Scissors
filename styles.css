@@ -11,10 +11,6 @@ body {
     text-align: center;
 }
 
-button:active {
-    transform: scale(1.02);
-}
-
 
 /* Page Alignments */
 
@@ -72,6 +68,13 @@ button {
     border-radius: 0.7rem;
     background-color: #31587A;
     padding: 1.5rem;
-    /* transition: 0.07s; */
     transform: scale(1);
 }
+
+button:enabled:active {
+    transform: scale(1.02);
+}
+button:disabled {
+    opacity: 0.5;
+}
+
