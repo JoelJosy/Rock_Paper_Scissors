@@ -52,6 +52,8 @@ function changeScore(user) {
     if (user === 'player') {
         playerScore ++;
         playerScoreEle.textContent = `${playerScore}`;
+        winAudio.currentTime = 0; // play audio
+        winAudio.play()
         if (playerScore == 5) {
             gameOver();
         };
@@ -59,6 +61,8 @@ function changeScore(user) {
     } else if (user === 'computer') {
         computerScore ++;
         computerScoreEle.textContent = `${computerScore}`;
+        loseAudio.currentTime = 0; // play audio
+        loseAudio.play()
         if (computerScore == 5) {
             gameOver();
         };
@@ -84,12 +88,15 @@ function getPlayerChoice(e) {
 };
 
 
-// Display Running Score
+// DOM Elements
 let playerScoreEle = document.getElementById('player-score');
 let computerScoreEle = document.getElementById('computer-score');
+
 let playerSelectionImg = document.getElementById('player-selection');
 let computerSelectionImg = document.getElementById('computer-selection');
 
+let loseAudio = document.querySelector('.lose-audio');
+let winAudio = document.querySelector('.win-audio');
 
 // Score Variables
 let playerScore = 0;
