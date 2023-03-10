@@ -7,6 +7,8 @@ function gameOver() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
+        tieAudio.currentTime = 0;
+        tieAudio.play();
         return "It's a Tie!";
     }
     else if (playerSelection == 'rock') {
@@ -53,7 +55,7 @@ function changeScore(user) {
         playerScore ++;
         playerScoreEle.textContent = `${playerScore}`;
         winAudio.currentTime = 0; // play audio
-        winAudio.play()
+        winAudio.play();
         if (playerScore == 5) {
             gameOver();
         };
@@ -62,7 +64,7 @@ function changeScore(user) {
         computerScore ++;
         computerScoreEle.textContent = `${computerScore}`;
         loseAudio.currentTime = 0; // play audio
-        loseAudio.play()
+        loseAudio.play();
         if (computerScore == 5) {
             gameOver();
         };
@@ -97,6 +99,7 @@ let computerSelectionImg = document.getElementById('computer-selection');
 
 let loseAudio = document.querySelector('.lose-audio');
 let winAudio = document.querySelector('.win-audio');
+let tieAudio = document.querySelector('.tie-audio');
 
 // Score Variables
 let playerScore = 0;
