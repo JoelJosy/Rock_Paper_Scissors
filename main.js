@@ -10,6 +10,7 @@ function gameOver() {
         modalText.textContent = "You Lost The Game! Better Luck Next Time.";
     };
 
+    container.style.cssText = "opacity: 0.1;";
     modal.classList.add('open');
 };
 
@@ -141,6 +142,7 @@ let computerSelectionArea = document.querySelector('.computer-selection-area')
 let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-text');
 let modalBtn = document.querySelector('.modal-btn');
+let container = document.querySelector('.container')
 
 // Score Variables
 let playerScore = 0;

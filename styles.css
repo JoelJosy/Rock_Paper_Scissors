@@ -2,7 +2,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     color: #F1FAEE;
-    background-color: #1D3557;
+    background-color: #272838;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    transition: opacity 0.2s ease-in;
 }
 
 .header {
@@ -24,7 +25,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #15263F;
 }
 
 /* Scoreboard */
@@ -39,7 +39,7 @@ body {
     margin-top: 1.6rem;
     height: 350px;
     width: 350px;
-    background-color: #223E60;
+    background-color: #F49F0A;
     border-radius: 0.7rem;
 }
 
@@ -48,7 +48,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background-color: #203A5C;
+    background-color: #F08700;
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
@@ -58,7 +58,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 272px;
-    border-radius: 0.7rem;
+    border-radius:0 0 0.7rem 0.7rem;
     transition: all 1s;
 }
 
@@ -68,15 +68,15 @@ body {
 
 /* Win/Lose/Tie Effects */
 .win-color {
-    background-color: #609966;
-    border: #609966;
-    box-shadow:  0 0 50px #609966; 
+    background-color: #31cf40;
+    border: #31cf40;
+    box-shadow:  0 0 50px #31cf40; 
 }
 
 .lose-color {
-    background-color: #DF2E38;
-    border: #DF2E38;
-    box-shadow:  0 0 50px #DF2E38;
+    background-color: #ff141f;
+    border: #ff141f;
+    box-shadow:  0 0 50px #ff141f;
 }
 
 .tie-shake {
@@ -100,14 +100,14 @@ body {
     gap: 2.5rem;
     padding: 1.3rem 2.5rem;
     margin: 1.6rem auto;
-    background-color: #223E60;
+    background-color: #F58B00;
     border-radius: 0.7rem;
 }
 
 button {
     border: none;
     border-radius: 0.7rem;
-    background-color: #31587A;
+    background-color: #F49F0A;
     padding: 1.5rem;
     transform: scale(1);
     cursor: pointer;
@@ -149,7 +149,6 @@ button:disabled {
 
 /* Modal */
 .modal {
-    background: #fff;
     border-radius: 0.7rem;
     width: 400px;
     position: absolute;
@@ -157,13 +156,25 @@ button:disabled {
     left: 50%;
     text-align: center;
     padding: 0 30px 30px;
-    color: #333;
+    background: #08415C;
+    color: #F1FAEE;
     transform: translate(-50%,-50%) scale(0.1);
     visibility: hidden;
     transition: transform 0.4s;
+    padding: 70px;
 }
 
 .modal.open {
     transform: translate(-50%,-50%) scale(1);
     visibility: visible;
+}
+
+.modal-btn {
+    color: #F1FAEE;
+    background-color: #F49F0A;
+    font-size: 0.9rem;
+    height: 40px;
+    width: 150px;
+    padding: 2px;
+    margin: 5px;
 }
